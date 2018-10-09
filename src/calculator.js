@@ -3,7 +3,8 @@ function add(number){
 	if(number == ""){
 		return 0;
 	}
-
+	var maxNumbersPattern = /\d\d\d\d\d*/g
+	number = number.replace(maxNumbersPattern,"0");
 	var negativeNumberMask = /-\d*/g;
 	if( negativeNumberMask.test(number) ){
 		var errorString = "Negatives not allowed: ";
